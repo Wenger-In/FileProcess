@@ -1,6 +1,6 @@
 import requests
 
-for i_cr in range(1642,2258):
+for i_cr in range(2261,2273):
     print('downloading CR'+str(i_cr)+' with requests')
     url = 'http://wso.stanford.edu/synoptic/WSO.'+str(i_cr)+'.F.txt'
     r = requests.get(url)
