@@ -2,8 +2,8 @@ import os
 import cv2
 from PIL import Image
 
-file = 'E:/Research/Work/[else]/corona_image_process/STEREO/mgn/'  # 图片目录
-output = 'E:/Research/Work/[else]/corona_image_process/STEREO/mgn.mp4'
+file = 'E:/Research/Work/tianwen_IPS/m1a07x_up/LASCO_observation/mgn_a_trous/'
+output = 'E:/Research/Work/tianwen_IPS/m1a07x_up/LASCO_observation/mgn_a_trous.mp4'
 
 def image_to_video(image_path, media_path):
     '''
@@ -19,7 +19,7 @@ def image_to_video(image_path, media_path):
     # 设置写入格式
     fourcc = cv2.VideoWriter_fourcc('M', 'P', '4', 'V')
     # 设置每秒帧数
-    fps = 3  # 由于图片数目较少，这里设置的帧数比较低
+    fps = 5  # 由于图片数目较少，这里设置的帧数比较低
     # 读取第一个图片获取大小尺寸，因为需要转换成视频的图片大小尺寸是一样的
     image = Image.open(image_path + image_names[0])
     # 初始化媒体写入对象
@@ -32,4 +32,5 @@ def image_to_video(image_path, media_path):
     # 释放媒体写入对象
     media_writer.release()
     print('视频写入完成！')
+
 image_to_video(file, output)
