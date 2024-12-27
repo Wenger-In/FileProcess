@@ -14,7 +14,7 @@ def image2video(image_dir, video_path):
     # Setting the writing format
     fourcc = cv2.VideoWriter_fourcc('M', 'P', '4', 'V')
     # Setting frames rate
-    fps = 5
+    fps = 3
     
     # Initializing
     image = Image.open(image_dir + image_names[0])
@@ -29,7 +29,7 @@ def image2video(image_dir, video_path):
     video_writer.release()
     print('Converting into the video is completed!')
 
-image_dir = 'E:/Research/Work/tianwen_IPS/m1a07x_up/LASCO_observation/mgn_a_trous/'
-video_path = 'E:/Research/Work/tianwen_IPS/m1a07x_up/LASCO_observation/mgn_a_trous.mp4'
+image_dir = 'E:/Research/Work/202405_solar_storm/HMI_field/BzBh/'
+video_path = 'E:/Research/Work/202405_solar_storm/HMI_field/BzBh.mp4'
 
 image2video(image_dir, video_path)
