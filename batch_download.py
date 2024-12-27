@@ -4,7 +4,7 @@ from sunpy.net import Fido
 from sunpy.net import attrs as a
 
 ## Selecting data type to download
-dl_data = 'HMI_SHARP'
+dl_data = 'WSO_synoptic'
 
 ## Downloading HMI-SHARP '.fits' data
 if dl_data == 'HMI_SHARP':
@@ -37,7 +37,7 @@ elif dl_data == 'WSO_synoptic':
     # Setting save directory
     save_dir = 'E:/Research/Data/WSO/download/txt/'
     # Iterate for Carrington Rotation index
-    for i_cr in range(2261,2273):
+    for i_cr in range(2273,2289):
         print('downloading CR' + str(i_cr) + ' with requests')
         # Setting download url
         url = 'http://wso.stanford.edu/synoptic/WSO.' + str(i_cr) + '.F.txt'
