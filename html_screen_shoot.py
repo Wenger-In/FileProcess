@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Selecting folder path
-folder_path = 'E:/Research/Work/tianwen_IPS/s1a26x'
+folder_path = 'E:/Research/Work/tianwen_IPS/m1a23x/recon'
 
 # Creating Chrome WebDriver
 service = Service(ChromeDriverManager().install())
